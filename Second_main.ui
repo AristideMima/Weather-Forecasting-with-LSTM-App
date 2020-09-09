@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>957</width>
+    <height>793</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>961</width>
+      <height>801</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame{
+	background-color:   #6b81cb  ;
+	border-radius: 30px;
+	color: white;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>10</y>
+       <width>421</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>cambria</family>
+       <pointsize>20</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel
+{
+ font-family: cambria;
+font-weight: bold;
+}</string>
+     </property>
+     <property name="text">
+      <string>Weather forecasting over Nigeria</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>60</y>
+       <width>621</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>- Enter differents values of the last 3 hours or 3 days seperated by space. (Ex: 10 234 21 10)</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>90</y>
+       <width>471</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>- Choose the prediction mode (daily or hourly). (Ex: Hourly Prediction)</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>120</y>
+       <width>421</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>- Choose location you want to predict. (Ex: Abuja)</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="values1">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>240</y>
+       <width>551</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPlainTextEdit
+{
+background-color: rgb(255, 255, 255); 
+color: black; font-size:15px;
+font-family: Arial;
+color: #6b4ebc;
+letter-spacing: 8px;
+font-weight: bold;
+}</string>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="plainText">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="values2">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>280</y>
+       <width>551</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPlainTextEdit
+{
+background-color: rgb(255, 255, 255); 
+color: black; font-size:15px;
+font-family: Arial;
+color: #6b4ebc;
+letter-spacing: 8px;
+font-weight: bold;
+}</string>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="values3">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>320</y>
+       <width>551</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPlainTextEdit
+{
+background-color: rgb(255, 255, 255); 
+color: black; font-size:15px;
+font-family: Arial;
+color: #6b4ebc;
+letter-spacing: 8px;
+font-weight: bold;
+}</string>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="predict_mod">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>361</y>
+       <width>551</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox
+{
+  	
+ 	font-family: Arial;
+ 	font-size: 14px;
+	padding: auto;
+	background-color: #846bc7;
+	border-style: none;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}</string>
+     </property>
+     <property name="duplicatesEnabled">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>true</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>Hourly prediction</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Daily Prediction</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>440</y>
+       <width>551</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	background-color: #6b4ebc;;
+    color: white;
+	font-family: Arial;
+	font-size: 18px;
+}
+
+QPushButton::chunck{
+	border-radius: 25px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Predict</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="predict_location">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>400</y>
+       <width>551</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox
+{
+  	
+ 	font-family: Arial;
+ 	font-size: 14px;
+	padding: auto;
+	background-color: #846bc7;
+	border-style: none;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}</string>
+     </property>
+     <property name="duplicatesEnabled">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>true</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>Abuja</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Lagos</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Bauchi</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Enugu</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Porthacourt</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Anyigba</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="solar_result">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>670</y>
+       <width>21</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+ font-size: 30px;
+font-family: Arial;
+text-align: center;
+}</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="air_result">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>670</y>
+       <width>21</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+ font-size: 30px;
+font-family: Arial;
+text-align: center;
+}</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="relative_result">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>670</y>
+       <width>21</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+ font-size: 30px;
+font-family: Arial;
+text-align: center;
+}</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="pressure_result">
+     <property name="geometry">
+      <rect>
+       <x>800</x>
+       <y>670</y>
+       <width>21</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+ font-size: 30px;
+font-family: Arial;
+text-align: center;
+}</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>230</y>
+       <width>181</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+
+font-weight: bold;
+font-family: Arial;
+font-size: 15px;
+}</string>
+     </property>
+     <property name="text">
+      <string>4 Values of Day (hour) 1</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>270</y>
+       <width>191</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+
+font-weight: bold;
+font-family: Arial;
+font-size: 15px;
+}</string>
+     </property>
+     <property name="text">
+      <string>4 Values of Day (hour) 2</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>310</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+
+font-weight: bold;
+font-family: Arial;
+font-size: 15px;
+}</string>
+     </property>
+     <property name="text">
+      <string>4 Values of Day (hour) 3</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>360</y>
+       <width>151</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+
+font-weight: bold;
+font-family: Arial;
+font-size: 15px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Prediction mode</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>400</y>
+       <width>151</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+
+font-weight: bold;
+font-family: Arial;
+font-size: 15px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Location</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="solar_text">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>630</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+ font-size: 12px;
+font-family: Arial;
+text-align: center;
+font-weight: bold;
+}</string>
+     </property>
+     <property name="text">
+      <string>SOLAR RADIATION</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="air_text">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>630</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+ font-size: 12px;
+font-family: Arial;
+text-align: center;
+font-weight: bold;
+}</string>
+     </property>
+     <property name="text">
+      <string>AIR TEMPERATURE</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="relative_text">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>630</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+ font-size: 12px;
+font-family: Arial;
+text-align: center;
+font-weight: bold;
+}</string>
+     </property>
+     <property name="text">
+      <string>RELATIVE HUMIDITY</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="pressure_text">
+     <property name="geometry">
+      <rect>
+       <x>790</x>
+       <y>630</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+ font-size: 12px;
+font-family: Arial;
+text-align: center;
+font-weight: bold;
+}</string>
+     </property>
+     <property name="text">
+      <string>PRESSURE</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="message_result">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>560</y>
+       <width>581</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Times New Roman</family>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <italic>true</italic>
+       <bold>true</bold>
+       <underline>true</underline>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+ font-size: 18px;
+font-family: &quot;Times New Roman&quot;;
+text-align: center;
+font-weight: bold;
+font-style: oblique;
+}</string>
+     </property>
+     <property name="text">
+      <string>PREDICTED HOURLY WEATHER PARAMETERS FOR PORTHACOURT</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>760</y>
+       <width>451</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;©&lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; font-style:italic;&quot;&gt;Daniel Mathew&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
